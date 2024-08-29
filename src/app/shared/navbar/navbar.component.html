@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm mt-5">
+      <a class="navbar-brand" href="#">
+        <span class="hidden">aqwe</span>
+        <img src="./assets/favicons/logo.svg" alt="" class="p-2" />
+      </a>
+      <button
+        class="navbar-toggler p-2 me-3 my-3"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarLinked"
+        aria-controls="navbarLinked"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarLinked">
+        <ul class="navbar-nav w-100 d-flex align-items-center justify-content-evenly">
+          @for (item of navItems; track $index) {
+          <li class="nav-item" (click)="scrollTo(item.anchor)">{{ item.title }}</li>
+          }
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</div>
